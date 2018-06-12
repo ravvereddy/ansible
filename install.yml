@@ -10,10 +10,10 @@
     - selinux
     - apacheHttpd
 
-- hosts: tomcat-servers
-  become: yes
-  become_method: sudo
+#- hosts: tomcat-servers
+#  become: yes
+#  become_method: sudo
 
-  roles:
-    - selinux
-    - tomcat
+#  roles:
+#    - selinux
+#    - tomcat
