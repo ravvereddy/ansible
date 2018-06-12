@@ -1,3 +1,3 @@
 tasks:
-  - name: ensure apache is at the latest version
+  - name: ensure apache is installed with latest vwesion
     yum: name=httpd state=latest
