@@ -6,6 +6,6 @@
 #      yum: name=* state=latest
 
    - name: install httpd
-   - lineinfile: name=/etc/yum/pluginconf.d/rhui-lb.conf regexp=enabled= line="enabled=0"
+#   - lineinfile: name=/etc/yum/pluginconf.d/rhui-lb.conf regexp=enabled= line="enabled=0"
      yum: name=httpd update_cache=yes state=latest
 
