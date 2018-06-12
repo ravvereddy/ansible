@@ -16,8 +16,8 @@
      replace: dest=/etc/yum.repos.d/nginx.repo regexp="enabled *= *1" replace="enabled=0"
      ignore_errors: True
 
-  - name: install nginx
-    yum: name=nginx state=present enablerepo=nginx
+   - name: install nginx
+     yum: name=nginx state=present enablerepo=nginx
 
-  - name: Start Nginx
-    service: name=nginx enabled=yes state=started
+   - name: Start Nginx
+     service: name=nginx enabled=yes state=started
