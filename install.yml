@@ -2,8 +2,8 @@
   remote_user: ec2-user
 
   tasks:
-   -  name: upgrade all packages
-      yum: name=* state=latest
+#   -  name: upgrade all packages
+#      yum: name=* state=latest
 
    - name: install httpd
      yum: name=httpd update_cache=yes state=latest
