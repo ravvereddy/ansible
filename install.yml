@@ -3,9 +3,20 @@
   remote_user: ec2-user
 
   tasks:
-  - name: Ensure Apache is installed on RHEL.
-  yum:
-    name: "{{ item }}"
-    state: "{{ apache_packages_state }}"
-    enablerepo: "{{ apache_enablerepo }}"
-  with_items: "{{ apache_packages }}"
+   – name: Copy repo file
+
+  copy: src=/etc/yum.repos.d/rhel.repo dest=/etc/yum.repos.d/rhel.repo
+  – name: Install httpd
+
+  action: yum name=httpd state=installed
+
+  – name: copy html
+
+  copy: src=/root/files/index.html dest=/var/www/html/index.html
+  – name: start apache
+
+  service:
+
+  name: httpd
+
+  state: restarted
